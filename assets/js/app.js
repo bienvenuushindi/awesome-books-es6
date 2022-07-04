@@ -1,3 +1,5 @@
+import { DateTime } from '../../lib/luxon.js';
+
 const bookForm = document.getElementById('book-form');
 const bookList = document.querySelector('.books');
 const msgBlock = document.getElementById('msg-block');
@@ -112,11 +114,8 @@ const clear = () => {
   if (Book.retrieveFormLocalStorage().length !== 0) msgBlock.innerHTML = '';
 };
 
-const newDate = new Date();
-document.getElementById('date-time').innerHTML = `${newDate.toDateString()} , ${newDate.toLocaleString('en-US', {
-  hour: 'numeric',
-  hour12: true,
-})}`;
+const dt = DateTime.now();
+document.getElementById('date-time').innerHTML = `${dt.toLocaleString(DateTime.DATETIME_MED)}`;
 
 navList.addEventListener('click', () => {
   clear();
