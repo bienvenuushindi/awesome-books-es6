@@ -1,19 +1,20 @@
 import Book from './modules/book/book.js';
-import {
-  bookList,
-  addMsgBlock,
-  bookForm,
-  msgBlock,
-  addNewSection,
-  bookListSection,
-  contactSection,
-} from './modules/dom_body_elements.js';
-
-import {
-  navAddNew, navLinks, navBar, navContact, navList, hamburgerMenu,
-} from './modules/dom_header_elements.js';
-
 import { DateTime } from './lib/luxon.js';
+
+const bookForm = document.getElementById('book-form');
+const bookList = document.querySelector('.books');
+const msgBlock = document.getElementById('msg-block');
+const addMsgBlock = document.getElementById('add-msg-block');
+const navList = document.querySelector('#nav-list');
+const navAddNew = document.querySelector('#nav-add-new');
+const navContact = document.querySelector('#nav-contact');
+const bookListSection = document.querySelector('.books-list');
+const addNewSection = document.querySelector('.add-new-book');
+const contactSection = document.querySelector('.add-contact-info');
+const hamburgerMenu = document.querySelector('.hamburger');
+const navBar = document.querySelector('nav');
+const navLinks = document.querySelectorAll('#nav-links li');
+
 
 bookForm.addEventListener('submit', (ev) => {
   const title = bookForm.elements.title.value;
