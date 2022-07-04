@@ -5,9 +5,9 @@ export default class Book {
 
   static noBookFoundMsg = notFound;
 
-  static deleteMsg = inserted;
+  static deleteMsg = deleted;
 
-  static insertMsg = deleted;
+  static insertMsg = inserted;
 
   constructor(title, author) {
     this.title = title;
