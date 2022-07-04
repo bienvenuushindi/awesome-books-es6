@@ -16,6 +16,7 @@
   "bugs": {
     "url": "https://github.com/bienvenuushindi/awesome-books-es6/issues"
   },
+  "type": "module",
   "homepage": "https://github.com/bienvenuushindi/awesome-books-es6#readme",
   "devDependencies": {
     "babel-eslint": "^10.1.0",
