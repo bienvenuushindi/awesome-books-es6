@@ -1,11 +1,13 @@
+import { notFound, inserted, deleted } from './feedback-msg.js';
+
 export default class Book {
   static list = [];
 
-  static noBookFoundMsg = 'No Book Found, Please Add First !';
+  static noBookFoundMsg = notFound;
 
-  static deleteMsg = 'Book deleted successfully.';
+  static deleteMsg = inserted;
 
-  static insertMsg = 'Book added successfully.';
+  static insertMsg = deleted;
 
   constructor(title, author) {
     this.title = title;
@@ -22,10 +24,6 @@ export default class Book {
 
   get details() {
     return ((this.title) + (this.author));
-  }
-
-  static updateLocalStorage() {
-    localStorage.setItem('books', JSON.stringify(Book.list));
   }
 
   static retrieveFormLocalStorage() {

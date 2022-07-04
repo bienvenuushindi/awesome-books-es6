@@ -1,5 +1,6 @@
 import { DateTime } from '../../lib/luxon.js';
 import Book from '../../modules/book.js';
+import BookStorage from '../../modules/book_storage.js';
 
 const bookForm = document.getElementById('book-form');
 const bookList = document.querySelector('.books');
@@ -13,7 +14,7 @@ bookForm.addEventListener('submit', (ev) => {
   book.store();
   bookForm.elements.title.value = '';
   bookForm.elements.author.value = '';
-  Book.updateLocalStorage();
+  BookStorage.update();
   const itemList = Book.listAll;
   Book.setUI(bookList, itemList());
   Book.setUI(addMsgBlock, Book.alert(Book.insertMsg, 'alert-success'));
@@ -24,7 +25,7 @@ bookForm.addEventListener('submit', (ev) => {
 bookList.addEventListener('click', (ev) => {
   if (ev.target.classList.contains('remove-button')) {
     Book.remove(ev.target.id);
-    Book.updateLocalStorage();
+    BookStorage.update();
     const itemList = Book.listAll;
     Book.setUI(bookList, itemList());
     Book.setUI(msgBlock, Book.alert(Book.deleteMsg, 'alert-danger'));
@@ -59,14 +60,12 @@ const clear = () => {
 
 const dt = DateTime.now();
 document.getElementById('date-time').innerHTML = `${dt.toLocaleString(DateTime.DATETIME_MED)}`;
-
 navList.addEventListener('click', () => {
   clear();
   bookListSection.classList.remove('d-none');
   addNewSection.classList.add('d-none');
   contactSection.classList.add('d-none');
 });
-
 navAddNew.addEventListener('click', () => {
   clear();
   bookListSection.classList.add('d-none');
