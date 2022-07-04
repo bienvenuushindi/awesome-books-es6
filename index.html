@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Awesome Books</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+            crossorigin="anonymous"
+    />
+    <link href="index.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- ######## Nav Section ###### -->
+<header class="fixed-top">
+    <div class="nav-bar bg-dark text-white border-primary header">
+        <a href="#" id="logo" class="text-white-50">Awesome Books</a>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav>
+            <ul id="nav-links">
+                <li id="nav-list">List</li>
+                <li id="nav-add-new">Add new</li>
+                <li id="nav-contact">Contact</li>
+            </ul>
+        </nav>
+    </div>
+    <div class="text-end">
+        <p class="p-2"><span id='date-time'></span></p>
+    </div>
+</header>
+
+<main>
+    <!-- ############# Book List Section ############ -->
+    <section class="w-75 mx-auto  books-list d-flex vh-100 flex-column justify-content-center ">
+        <h1 class="text-center mb-5">All Awesome Books</h1>
+        <div id="msg-block"></div>
+        <div class="book-list">
+            <ul class="books text-center border border-dark p-0 m-0"></ul>
+        </div>
+    </section>
+    <!-- ############# Add Books and Author Section ############ -->
+    <section class="w-50 mx-auto mb-5 vh-100 d-flex flex-column justify-content-center  add-new-book d-none">
+        <div class="add-book">
+            <h1 class="text-center mb-5">Add a new book</h1>
+            <div id="add-msg-block" class="mt-2"></div>
+            <form action="#" method="post" id="book-form">
+                <div class="from-group my-2">
+                    <label for="title"></label>
+                    <input
+                            type="text"
+                            name="title"
+                            id="title"
+                            placeholder="Title"
+                            required
+                            class="form-control"
+                    />
+                </div>
+                <div class="from-group my-2">
+                    <label for="author"></label>
+                    <input
+                            type="text"
+                            name="author"
+                            id="author"
+                            placeholder="Authors"
+                            required
+                            class="form-control"
+                    />
+                </div>
+                <div class="from-group my-5 text-end">
+                    <button
+                            type="submit"
+                            class="btn btn-primary"
+                            name="add-book"
+                            id="add-book"
+                    >
+                        Add
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ######## Contact Section ###### -->
+    <div class="text-capitalize vh-100 w-50 text-center mx-auto d-flex flex-column justify-content-center  d-block contact-info add-contact-info d-none">
+        <h2 class="mb-5">Contact Information</h2>
+        <p class="text-20 w-75 mx-auto mb-4 text-start ">
+            Do you have any questions or you just want to say "Hello"? <br/>
+            You can reach out to us!
+        </p>
+        <address class="text-20 w-75 mx-auto text-start">
+            Our e-mail: <a href="mailto:mail@mail.com"> mail@mail.com</a><br/> Our phone number: <strong> 00123456789</strong><br/>Our
+            address: <strong> Streetname 22, 123456 City, Country</strong>
+        </address>
+    </div>
+</main>
+<footer class="fixed-bottom border bg-light-transparent m-0 px-3 pt-2">
+    <p class="text-20 mb-0"> &copy;2022  All copyrights are reserved </p>
+</footer>
+<script src="assets/js/index.js" type="module"></script>
+</body>
+</html>
+
