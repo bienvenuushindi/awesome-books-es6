@@ -27,7 +27,7 @@ export default class Book {
   }
 
   static retrieveFormLocalStorage() {
-    Book.list = [...JSON.parse(localStorage.getItem('books'))];
+    if (localStorage.getItem('books')) Book.list = [...JSON.parse(localStorage.getItem('books'))];
     return Book.list;
   }
 
