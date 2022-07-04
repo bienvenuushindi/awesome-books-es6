@@ -1,4 +1,4 @@
-export default  class Book {
+export default class Book {
   static list = [];
 
   static noBookFoundMsg = 'No Book Found, Please Add First !';
