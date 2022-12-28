@@ -101,7 +101,7 @@ li {
     margin: 5px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
-    background-color: #000;
+    background-color: #fff;
   }
 
   .hamburger.active .bar:nth-child(2) {
